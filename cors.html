@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>跨域</title>
+	</head>
+	<body>
+		<script src="axios.js">
+			
+		</script>
+		<!-- <button onclick="send()">java-web跨域发送</button> -->
+		<button onclick="send_mvc()">mvc 跨域</button>
+		<script src="axios.js"></script>
+		<script>
+			function send() {
+				axios({
+					method: 'get',
+					url: 'http://localhost:8080/test'
+				}).then(res => console.log(res));
+			}
+			function send_mvc() {
+				axios({
+					method: 'get',
+					url: 'http://localhost:8080/mvc',
+				}).then(res => console.log(res.data));
+			}
+		</script>
+	</body>
+</html>
